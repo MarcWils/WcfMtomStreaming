@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;net6</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+		<Reference Include="System.ServiceModel" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6'">
+		<PackageReference Include="System.ServiceModel.Primitives" Version="4.10.0" />
+	</ItemGroup>
+
+</Project>
